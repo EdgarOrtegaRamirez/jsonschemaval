@@ -1,0 +1,12 @@
+{
+  "id": "not-a-number",
+  "name": "",
+  "email": "invalid-email",
+  "role": "superadmin",
+  "active": "yes",
+  "tags": [],
+  "address": {
+    "zip": "bad"
+  },
+  "extra_field": "should fail"
+}

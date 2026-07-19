@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Example User",
+  "description": "A simple user object for testing",
+  "type": "object",
+  "properties": {
+    "id": { "type": "integer", "minimum": 1 },
+    "name": { "type": "string", "minLength": 1 },
+    "email": { "type": "string", "format": "email" },
+    "role": { "type": "string", "enum": ["admin", "user", "guest"] },
+    "active": { "type": "boolean" },
+    "tags": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+    "address": {
+      "type": "object",
+      "properties": {
+        "street": { "type": "string" },
+        "city": { "type": "string" },
+        "zip": { "type": "string", "pattern": "^[0-9]{5}$" }
+      },
+      "required": ["street", "city", "zip"]
+    }
+  },
+  "required": ["id", "name", "email"],
+  "additionalProperties": false
+}

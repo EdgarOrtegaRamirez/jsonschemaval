@@ -1,0 +1,13 @@
+{
+  "id": 1,
+  "name": "Alice",
+  "email": "alice@example.com",
+  "role": "user",
+  "active": true,
+  "tags": ["developer", "gopher"],
+  "address": {
+    "street": "123 Main St",
+    "city": "Springfield",
+    "zip": "62701"
+  }
+}
