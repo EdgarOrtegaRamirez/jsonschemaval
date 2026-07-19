@@ -27,11 +27,11 @@ jobs:
       - name: Download dependencies
         run: go mod download
 
-      - name: Test
-        run: go test -v -race -count=1 ./cmd/jsonschemaval/...
-
       - name: Build
         run: go build -o jsonschemaval ./cmd/jsonschemaval/
+
+      - name: Test
+        run: go test -v -race -count=1 ./cmd/jsonschemaval/...
 
       - name: Vet
         run: go vet ./...
